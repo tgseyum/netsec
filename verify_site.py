@@ -1,8 +1,8 @@
 from pathlib import Path
 import re
 
-root = Path(r'd:\pproject2')
-html_files = sorted(root.glob('*.html'))
+root = Path(__file__).resolve().parent
+html_files = sorted(root.rglob('*.html'))
 missing = []
 
 for html in html_files:
@@ -13,7 +13,7 @@ for html in html_files:
             continue
         target = root / ref.lstrip('/') if ref.startswith('/') else (html.parent / ref)
         if not target.exists():
-            missing.append((html.name, ref))
+            missing.append((html.relative_to(root).as_posix(), ref))
 
 if missing:
     print('BROKEN LINKS FOUND:')

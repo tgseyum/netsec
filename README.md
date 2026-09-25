@@ -4,17 +4,21 @@ This project contains a static corporate website for NetSec Consulting Inc., bui
 
 ## Project Structure
 
-- `index.html` — homepage
-- `about.html` — company overview
-- `services.html` — services overview
-- `network-security.html` — network security page
-- `networking.html` — networking page
-- `wireless.html` — wireless network page
-- `consulting.html` — consulting page
-- `contact.html` — contact form page
+- `index.html` — root homepage entry point for GitHub Pages
+- `home/index.html` — extensionless homepage route
+- `about/index.html` — company overview route
+- `services/index.html` — services overview route
+- `network-security/index.html` — network security route
+- `networking/index.html` — networking route
+- `wireless/index.html` — wireless network route
+- `consulting/index.html` — consulting route
+- `contact/index.html` — contact information route
+- `consultation/index.html` — consultation form route
 - `css/style.css` — shared design system and responsive styling
 - `js/script.js` — navigation, validation, back-to-top, and scroll behavior
 - `images/` — folders for future image assets
+
+Each page lives in a folder with an `index.html`, so GitHub Pages serves clean URLs such as `/services/` instead of `/services.html`.
 
 ## Local Preview
 
@@ -29,6 +33,7 @@ Then open `http://localhost:8000` in a browser.
 
 ## Notes
 
-- The contact form includes client-side validation.
+- The consultation form includes client-side validation.
+- The contact page contains contact information only.
 - It is intentionally designed as a static HTML site without a backend form service.
 - The site uses remote high-quality technology imagery and Bootstrap assets for easy deployment.
